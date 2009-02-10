@@ -21,6 +21,16 @@
         font-size: 18px;
         font-weight: bold;
       }
+      div.wiki h2 {
+          font-size: 18px;
+      }
+      div.wiki h3 {
+          font-size: 16px;
+      }
+      div.wiki {
+          font-size: 14px;
+          text-align: left;
+      }
       -->
     </style>
   </head>
