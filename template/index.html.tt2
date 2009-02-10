@@ -1,24 +1,6 @@
-[% WRAPPER wrapper.html.tt2 %]
-  <p>
-    <img src="BioTankPic2.jpg" height="251" width="288">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-  </p>
-  <p>&nbsp;</p>
-  <p align="center"><img src="earth.jpg" height="354" width="247"></p>
-  <p>&nbsp;</p>
-  </td>
-  <td width="440">
-    <table align="center" border="0" cellpadding="0" cellspacing="0" width="368">
-      <tbody>
-        <tr>
-          <td width="368">
-            <div class="style2" align="center">
-              <p class="style11" align="left">The Little Pump that Could</p>
-              <p align="left">The
+[% WRAPPER "two-column.html.tt2" %]
+<p class="style11" align="left">The Little Pump that Could</p>
+<p align="left">The
 Vancouver Biodiesel Co-op is proud to announce the opening of Recycling
 Alternative’s new 4220 Litre pump with an automatic cardlock system.
 For the first time, members will be able to purchase fuel at any time,
@@ -48,10 +30,5 @@ biodiesel is much cleaner running in your engine, you should monitor
 your fuel filter (deposits from previous use of conventional diesel are
 flushed out). The more biodiesel you use, the longer lasting your
 engine will last.</p>
-            <p align="left">Enjoy the juice!</p>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<p align="left">Enjoy the juice!</p>
 [% END %]

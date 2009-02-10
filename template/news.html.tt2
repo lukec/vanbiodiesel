@@ -1,2 +1,4 @@
-[% WRAPPER wrapper.html.tt2 %]
+[% WRAPPER "two-column.html.tt2" %]
+  <p class="style11" align="left">Co-op News</p>
+  <p align="left">No news yet.</p>
 [% END %]
