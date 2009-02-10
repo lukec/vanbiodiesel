@@ -1,47 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Welcome to VancouverBioDiesel.org, Home of the Vancouver BioDiesel Co-op!</title>
-    <style type="text/css">
-      <!--
-      body {
-        background-color: #253025;
-      }
-      body,td,th {
-        font-family: Arial, Helvetica, sans-serif;
-        color: #FFFFFF;
-      }
-      .style1 {font-size: 9px}
-      .style2 {color: #000000}
-      .style6 {font-size: 14px}
-      .style8 {font-size: 12px}
-      .style10 {color: #FFFFFF; font-size: 9px; }
-      .style11 {
-        font-size: 18px;
-        font-weight: bold;
-      }
-      -->
-    </style>
-  </head>
-  
-  <body>
-    <table align="center" border="0" cellpadding="0" cellspacing="0" width="180">
-      <tbody>
-        <tr>
-          <td>
-            <div align="center">
-            <table align="center" border="0" cellpadding="0" cellspacing="0" width="180">
-              <tbody>
-                <tr>
-                  <td>
-                    <div align="center">
-                      <img src="header.jpg" alt="Welcome to VancouverBioDiesel.org" usemap="#Map" border="0" height="191" width="800">
-                      <table border="0" cellpadding="0" cellspacing="0" width="800">
-                        <tbody>
-                          <tr>
-                            <td bgcolor="#ffffff" height="498">
-                              <br>
+[% WRAPPER wrapper.html.tt2 %]
                               <table align="center" border="0" cellpadding="0" cellspacing="0" width="712">
                                 <tbody>
                                   <tr>
@@ -105,46 +62,4 @@ engine will last.</p>
                                     </tr>
                                   </tbody>
                                 </table>
-                                <br>
-                                <br>
-                                <table border="0" cellpadding="0" cellspacing="0" height="32" width="800">
-                                  <tbody>
-                                    <tr>
-                                      <td bgcolor="#006633">
-                                        <div class="style1" align="center">
-                                          © 2008 Vancouver BioDiesel Co-op, All Rights Reserved
-                                        </div>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <table border="0" cellpadding="0" cellspacing="0" width="800">
-              </table>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <div align="center"></div>
-
-    <map name="Map" id="Map">
-      <area shape="rect" coords="5,162,69,186" href="http://www.vancouverbiodiesel.org/index.html" alt="Home">
-      <area shape="rect" coords="92,159,239,186" href="http://en.wikipedia.org/wiki/Biodiesel" target="_blank" alt="What is Biodiesel?">
-      <area shape="rect" coords="351,161,469,186" href="http://www.vancouverbiodiesel.org/join.html" alt="Join the Co-op">
-      <area shape="rect" coords="487,160,621,187" href="http://www.vancouverbiodiesel.org/gallery.html" alt="Photo Gallery">
-      <area shape="rect" coords="727,161,786,187" href="http://www.vancouverbiodiesel.org/links.html" alt="Links">
-      <area shape="rect" coords="8,10,793,157" href="http://www.vancouverbiodiesel.org/index.html" alt="Welcome to VancouverBioDiesel.org">
-      <area shape="rect" coords="259,161,335,187" href="http://www.vancouverbiodiesel.org/news.html">
-      <area shape="rect" coords="635,160,709,187" href="http://www.vancouverbiodiesel.org/press.html">
-    </map>
-  </body>
-</html>
+[% END %]
