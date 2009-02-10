@@ -1,2 +1,53 @@
 [% WRAPPER wrapper.html.tt2 %]
+  <p align="center">
+    <span class="style11">Photo Gallery</span>
+    <br />
+  </p>
+  <table width="360" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="360"><img src="images/DSC02760.jpg" alt="" width="360" height="300" /></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><img src="images/DSC02755.jpg" width="360" height="270" /></td>
+      </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="41"><img src="images/DSC02754.jpg" width="360" height="270" /></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><div align="center"><img src="images/DSC02763.jpg" width="270" height="360" /></div></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><img src="images/DSC02776.jpg" width="360" height="270" /></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><img src="images/DSC02777.jpg" width="360" height="270" /></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><div align="center"><img src="images/DSC02758.jpg" width="270" height="360" /></div></td>
+    </tr>
+    <tr>
+      <td><div align="center"><span class="style2">Mr. Jazz is our official mascot.</span></div></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
 [% END %]
