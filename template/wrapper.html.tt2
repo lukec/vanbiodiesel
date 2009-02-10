@@ -75,14 +75,14 @@
     <div align="center"></div>
 
     <map name="Map" id="Map">
-      <area shape="rect" coords="5,162,69,186" href="http://www.vancouverbiodiesel.org/index.html" alt="Home">
+      <area shape="rect" coords="5,162,69,186" href="index.html" alt="Home">
       <area shape="rect" coords="92,159,239,186" href="http://en.wikipedia.org/wiki/Biodiesel" target="_blank" alt="What is Biodiesel?">
-      <area shape="rect" coords="351,161,469,186" href="http://www.vancouverbiodiesel.org/join.html" alt="Join the Co-op">
-      <area shape="rect" coords="487,160,621,187" href="http://www.vancouverbiodiesel.org/gallery.html" alt="Photo Gallery">
-      <area shape="rect" coords="727,161,786,187" href="http://www.vancouverbiodiesel.org/links.html" alt="Links">
-      <area shape="rect" coords="8,10,793,157" href="http://www.vancouverbiodiesel.org/index.html" alt="Welcome to VancouverBioDiesel.org">
-      <area shape="rect" coords="259,161,335,187" href="http://www.vancouverbiodiesel.org/news.html">
-      <area shape="rect" coords="635,160,709,187" href="http://www.vancouverbiodiesel.org/press.html">
+      <area shape="rect" coords="351,161,469,186" href="join.html" alt="Join the Co-op">
+      <area shape="rect" coords="487,160,621,187" href="gallery.html" alt="Photo Gallery">
+      <area shape="rect" coords="727,161,786,187" href="links.html" alt="Links">
+      <area shape="rect" coords="8,10,793,157" href="index.html" alt="Welcome to VancouverBioDiesel.org">
+      <area shape="rect" coords="259,161,335,187" href="news.html">
+      <area shape="rect" coords="635,160,709,187" href="press.html">
     </map>
   </body>
 </html>

@@ -23,6 +23,11 @@ sub render {
     $self->clean_output;
     $self->copy_static;
     $self->render_homepage;
+    $self->render_news;
+    $self->render_join;
+    $self->render_photos;
+    $self->render_press;
+    $self->render_links;
 }
 
 sub clean_output {
@@ -40,14 +45,46 @@ sub copy_static {
 
 sub render_homepage {
     my $self = shift;
+    $self->_render_page( main => 'index' );
+}
+
+sub render_news {
+    my $self = shift;
+    $self->_render_page( main => 'index' );
+}
+
+sub render_join {
+    my $self = shift;
+    $self->_render_page( main => 'index' );
+}
+
+sub render_photos {
+    my $self = shift;
+    $self->_render_page( main => 'index' );
+}
+
+sub render_press {
+    my $self = shift;
+    $self->_render_page( main => 'index' );
+}
+
+sub render_links {
+    my $self = shift;
+    $self->_render_page( main => 'index' );
+}
+
+sub _render_page {
+    my $self = shift;
+    my $page = (shift) . '.html.tt2';
+    my $out  = shift;
+    my $vars = shift || {};
 
     my $template = Template->new({
         INCLUDE_PATH => [$self->{template_dir}],
     });
 
-    my $vars = {};
-    my $output_file = "$self->{output_dir}/index.html";
-    $template->process('main.html.tt2', $vars, $output_file)
+    my $output_file = "$self->{output_dir}/$out.html";
+    $template->process($page, $vars, $output_file)
         || die $template->error();
 }
 
