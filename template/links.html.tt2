@@ -1,2 +1,45 @@
 [% WRAPPER wrapper.html.tt2 %]
+<p align="center">
+  <span class="style2">
+    <strong>LINKS</strong>
+    <span class="style3">.</span>
+    <br />
+    <br />
+    <a href="https://www.socialtext.net/vanbiodiesel/index.cgi?vancouver_biodiesel_co_op_wiki">Vancouver Biodiesel Co-Op Wiki</a>
+    <br />
+    <br />
+    <a href="http://www.homebiodieselkits.com/">http://www.homebiodieselkits.com/</a><br />
+    Source   for small-scale production equipment<br />
+    <br />
+    <a href="http://biodiesel.infopop.cc/6/ubb.x?a=cfrm&amp;s=447609751">http://biodiesel.infopop.cc/6/ubb.x?a=cfrm&amp;s=447609751</a><br />
+    Great   forum for general information on Biodiesel and SVO fuel<br />
+
+    <br />
+    <a href="http://www.tdiclub.com/">http://www.tdiclub.com/</a><br />
+    Forum for TDI and   diesel vehicle owners.  <br />
+    <br />
+    <a href="http://journeytoforever.org/biodiesel_make.html">http://journeytoforever.org/biodiesel_make.html</a><br />
+    How   to make your own Biodiesel.<br />
+    <br />
+
+    <a href="http://www.alternative-energy-news.info/headlines/biofuels/">http://www.alternative-energy-news.info/headlines/biofuels/</a><br />
+    Up   to date information on all Biofuels and other renewable energy   technology.<br />
+    <br />
+    <a href="http://www.canola-council.org/biodiesel/">http://www.canola-council.org/biodiesel/</a><br />
+    News   concerning the production of a major Biodiesel feedstock in Canada.<br />
+    <br />
+    <a href="http://www.4refuel.com/subnews/biodieselvancouverbc.cfm">http://www.4refuel.com/subnews/biodieselvancouverbc.cfm</a><br />
+
+    News   RE Biodiesel in and around Vancouver.<br />
+    <br />
+    <a href="http://www.localb100.com/">http://www.localb100.com/</a><br />
+    Biodiesel   homebrew book by noted Biodiesel advocate &quot;Girl Mark.&quot;<br />
+    <br />
+    <a href="http://www.utahbiodieselsupply.com/">http://www.utahbiodieselsupply.com/</a><br />
+
+    GREAT   online store for Biodiesel production equipment and information.<br />
+    <br />
+  </span>
+  <br />
+</p>
 [% END %]
