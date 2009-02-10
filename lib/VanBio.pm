@@ -45,46 +45,45 @@ sub copy_static {
 
 sub render_homepage {
     my $self = shift;
-    $self->_render_page( main => 'index' );
+    $self->_render_page( 'index' );
 }
 
 sub render_news {
     my $self = shift;
-    $self->_render_page( main => 'index' );
+    $self->_render_page( 'news' );
 }
 
 sub render_join {
     my $self = shift;
-    $self->_render_page( main => 'index' );
+    $self->_render_page( 'join' );
 }
 
 sub render_photos {
     my $self = shift;
-    $self->_render_page( main => 'index' );
+    $self->_render_page( 'photos' );
 }
 
 sub render_press {
     my $self = shift;
-    $self->_render_page( main => 'index' );
+    $self->_render_page( 'press' );
 }
 
 sub render_links {
     my $self = shift;
-    $self->_render_page( main => 'index' );
+    $self->_render_page( 'links' );
 }
 
 sub _render_page {
     my $self = shift;
-    my $page = (shift) . '.html.tt2';
-    my $out  = shift;
+    my $page = shift;
     my $vars = shift || {};
 
     my $template = Template->new({
         INCLUDE_PATH => [$self->{template_dir}],
     });
 
-    my $output_file = "$self->{output_dir}/$out.html";
-    $template->process($page, $vars, $output_file)
+    my $output_file = "$self->{output_dir}/$page.html";
+    $template->process("$page.html.tt2", $vars, $output_file)
         || die $template->error();
 }
 
