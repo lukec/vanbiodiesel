@@ -7,6 +7,29 @@ use Fatal qw/rmtree mkpath/;
 use Carp qw/croak/;
 use Socialtext::WikiObject;
 
+=head1 NAME
+
+VanBio - code to render the vancouverbiodiesel.org website
+
+=cut
+
+our $VERSION = '0.01';
+
+=head1 SYNOPSIS
+
+This code reads content from the Socialtext REST API and renders it using TT2.
+
+    use VanBio;
+
+    VanBio->new(
+        template_dir => "$blah/template",
+        output_dir   => "$blah/web",
+        static_dir   => "$blah/static",
+        rester       => Socialtext::Resting->new(%rester_args),
+    )->render;
+        
+=cut
+
 sub new {
     my $class = shift;
     my $self = { @_ };
@@ -119,4 +142,22 @@ sub _get_page_html {
     $self->{rester}->accept('text/html');
     return $self->{rester}->get_page($page);
 }
+
+=head1 AUTHOR
+
+Luke Closs, C<< <cpan at 5thplane.com> >>
+
+=head1 ACKNOWLEDGEMENTS
+
+Thanks to the authors and designers of the Socialtext REST API.
+
+=head1 COPYRIGHT & LICENSE
+
+Copyright 2009 Luke Closs, all rights reserved.
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
+=cut
+
 1;

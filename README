@@ -1,0 +1,28 @@
+This code produces the http://vancouverbiodiesel.org website.
+
+To use this code, you will need to install some Perl modules from http://search.cpan.org.
+
+Important Files:
+ - bin/vanbio-render-site   - this is the script you run to produce the website
+ - lib/VanBio.pm            - this is the code used by the render-site script
+ - static/*                 - these files will be added to the site
+ - template/*               - these are the templates that produce the site HTML
+ - web/*                    - this is where the rendered site goes 
+
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+	perl Makefile.PL
+	make
+	make test
+	make install
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2009 Luke Closs
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
