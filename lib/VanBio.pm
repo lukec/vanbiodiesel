@@ -72,27 +72,28 @@ sub copy_static {
 sub render_homepage {
     my $self = shift;
 
-    my $content = $self->_get_page_html('home page');
+    my $content = $self->_get_page_html('homepage');
     $self->_render_page( 'index', { content => $content } );
 }
 
 sub render_news {
     my $self = shift;
 
-    my $content = $self->_get_page_html('news page');
+    my $content = $self->_get_page_html('news');
     $self->_render_page( 'news', { content => $content } );
 }
 
 sub render_join {
     my $self = shift;
 
-    my $content = $self->_get_page_html('join page');
+    my $content = $self->_get_page_html('join');
     $self->_render_page( 'join', { content => $content } );
 }
 
 sub render_photos {
     my $self = shift;
-    $self->_render_page( 'photos' );
+    my $content = $self->_get_page_html('Photo Gallery');
+    $self->_render_page( 'photos', { content => $content } );
 }
 
 sub render_press {
@@ -106,7 +107,7 @@ sub render_links {
     $self->{rester}->accept('text/x.socialtext-wiki');
     my $page = Socialtext::WikiObject->new(
         rester => $self->{rester},
-        page => 'links page',
+        page => 'Website: links',
     );
     my $links = [];
     my $link_table = $page->{links}{table};
@@ -138,9 +139,12 @@ sub _render_page {
 
 sub _get_page_html {
     my $self = shift;
-    my $page = shift;
+    my $page = "Website: " . shift;
     $self->{rester}->accept('text/html');
-    return $self->{rester}->get_page($page);
+    warn "Fetching '$page'\n";
+    my $content = $self->{rester}->get_page($page);
+    warn "Could not find '$page'" unless $self->{rester}->response->code == 200;
+    return $content;
 }
 
 =head1 AUTHOR
