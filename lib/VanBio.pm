@@ -54,6 +54,7 @@ sub render {
     $self->render_photos;
     $self->render_press;
     $self->render_links;
+    $self->render_faq;
 }
 
 sub clean_output {
@@ -121,6 +122,12 @@ sub render_links {
     }
 
     $self->_render_page( 'links', { links => $links } );
+}
+
+sub render_faq {
+    my $self = shift;
+    my $content = $self->_get_page_html('FAQ');
+    $self->_render_page( 'faq', { content => $content } );
 }
 
 sub _render_page {
