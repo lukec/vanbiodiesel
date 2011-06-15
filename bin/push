@@ -1,2 +1,3 @@
 #!/bin/bash
+TD=lukecloss@jervis.textdrive.com
 rsync -avz web/* $TD:web/bio
