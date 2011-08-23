@@ -1,8 +1,5 @@
 [% WRAPPER wrapper.html.tt2 %]
-  <p align="center">
-    <span class="style11">Photo Gallery</span>
-    <br />
-  </p>
+  <h1>Co-op Photo Gallery</h1>
   <style>
   .content img {
     display: block;
@@ -14,5 +11,14 @@
   }
 
   </style>
-  <div class="content">[% content %]</div>
+<p>
+<img alt="http://www.vancouverbiodiesel.org/images/DSC02760.jpg" src="http://www.vancouverbiodiesel.org/images/DSC02760.jpg" border="0" /><br />
+<img alt="http://www.vancouverbiodiesel.org/images/DSC02755.jpg" src="http://www.vancouverbiodiesel.org/images/DSC02755.jpg" border="0" /><br />
+<img alt="http://www.vancouverbiodiesel.org/images/DSC02754.jpg" src="http://www.vancouverbiodiesel.org/images/DSC02754.jpg" border="0" /><br />
+<img alt="http://www.vancouverbiodiesel.org/images/DSC02763.jpg" src="http://www.vancouverbiodiesel.org/images/DSC02763.jpg" border="0" /><br />
+<img alt="http://www.vancouverbiodiesel.org/images/DSC02776.jpg" src="http://www.vancouverbiodiesel.org/images/DSC02776.jpg" border="0" /><br />
+<img alt="http://www.vancouverbiodiesel.org/images/DSC02777.jpg" src="http://www.vancouverbiodiesel.org/images/DSC02777.jpg" border="0" /><br />
+<img alt="http://www.vancouverbiodiesel.org/images/bio-slab.jpg" src="http://www.vancouverbiodiesel.org/images/bio-slab.jpg" border="0" /><br />
+<img alt="http://www.vancouverbiodiesel.org/images/DSC02758.jpg" src="http://www.vancouverbiodiesel.org/images/DSC02758.jpg" border="0" /><br />
+Mr. Jazz is our official mascot.</p>
 [% END %]

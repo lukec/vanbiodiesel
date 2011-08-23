@@ -1,4 +1,0 @@
-[% WRAPPER "two-column.html.tt2" %]
-  <h1>Frequently Asked Questions</h1>
-  [% content %]
-[% END %]

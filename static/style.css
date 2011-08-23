@@ -1,0 +1,27 @@
+div.container {
+    width: 800px;
+}
+
+div.container-fluid div.sidebar {
+  float: right;
+  width: 180px;
+}
+
+div.content {
+    padding: 5px;
+}
+
+div.sidebar {
+    padding: 0px 0px 0px 10px;
+    background-color: #BBD8E9;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+@-moz-document url-prefix() {
+    div.sidebar {
+        padding: 0 0 0 20px;
+    }
+}
+

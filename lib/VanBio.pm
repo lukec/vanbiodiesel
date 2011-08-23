@@ -25,7 +25,6 @@ This code reads content from the Socialtext REST API and renders it using TT2.
         template_dir => "$blah/template",
         output_dir   => "$blah/web",
         static_dir   => "$blah/static",
-        rester       => Socialtext::Resting->new(%rester_args),
     )->render;
         
 =cut
@@ -34,12 +33,11 @@ sub new {
     my $class = shift;
     my $self = { @_ };
 
-    for (qw/output_dir static_dir template_dir rester/) {
+    for (qw/output_dir static_dir template_dir/) {
         croak "$_ is required!" unless $self->{$_};
     }
     bless $self, $class;
 
-    $self->{rester}->accept('text/html');
     return $self;
 }
 
@@ -48,13 +46,9 @@ sub render {
 
     $self->clean_output;
     $self->copy_static;
-    $self->render_homepage;
-    $self->render_news;
-    $self->render_join;
-    $self->render_photos;
-    $self->render_press;
-    $self->render_links;
-    $self->render_faq;
+    $self->render_page('index');
+    $self->render_page('news');
+    $self->render_page('photos');
 }
 
 sub clean_output {
@@ -70,70 +64,10 @@ sub copy_static {
     system("cp -R $self->{static_dir}/* $self->{output_dir}");
 }
 
-sub render_homepage {
-    my $self = shift;
-
-    my $content = $self->_get_page_html('homepage');
-    $self->_render_page( 'index', { content => $content } );
-}
-
-sub render_news {
-    my $self = shift;
-
-    my $content = $self->_get_page_html('news');
-    $self->_render_page( 'news', { content => $content } );
-}
-
-sub render_join {
-    my $self = shift;
-
-    my $content = $self->_get_page_html('join');
-    $self->_render_page( 'join', { content => $content } );
-}
-
-sub render_photos {
-    my $self = shift;
-    my $content = $self->_get_page_html('Photo Gallery');
-    $self->_render_page( 'photos', { content => $content } );
-}
-
-sub render_press {
-    my $self = shift;
-    $self->_render_page( 'press' );
-}
-
-sub render_links {
-    my $self = shift;
-
-    $self->{rester}->accept('text/x.socialtext-wiki');
-    my $page = Socialtext::WikiObject->new(
-        rester => $self->{rester},
-        page => 'Website: links',
-    );
-    my $links = [];
-    my $link_table = $page->{links}{table};
-    shift @$link_table; # pop off the header row
-    for my $row (@$link_table) {
-        push @$links, {
-            href => $row->[0],
-            name => $row->[1],
-            desc => $row->[2],
-        };
-    }
-
-    $self->_render_page( 'links', { links => $links } );
-}
-
-sub render_faq {
-    my $self = shift;
-    my $content = $self->_get_page_html('FAQ');
-    $self->_render_page( 'faq', { content => $content } );
-}
-
-sub _render_page {
+sub render_page {
     my $self = shift;
     my $page = shift;
-    my $vars = shift || {};
+    my $vars = shift || { page => $page };
 
     my $template = Template->new({
         INCLUDE_PATH => [$self->{template_dir}],
@@ -142,16 +76,6 @@ sub _render_page {
     my $output_file = "$self->{output_dir}/$page.html";
     $template->process("$page.html.tt2", $vars, $output_file)
         || die $template->error();
-}
-
-sub _get_page_html {
-    my $self = shift;
-    my $page = "Website: " . shift;
-    $self->{rester}->accept('text/html');
-    warn "Fetching '$page'\n";
-    my $content = $self->{rester}->get_page($page);
-    warn "Could not find '$page'" unless $self->{rester}->response->code == 200;
-    return $content;
 }
 
 =head1 AUTHOR

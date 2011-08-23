@@ -1,3 +1,0 @@
-[% WRAPPER "two-column.html.tt2" %]
-  [% content %]
-[% END %]
