@@ -68,6 +68,7 @@ sub render_page {
     my $self = shift;
     my $page = shift;
     my $vars = shift || { page => $page };
+    $vars->{secure_host} = 'https://ssl-biopay.dotcloud.com';
 
     my $template = Template->new({
         INCLUDE_PATH => [$self->{template_dir}],
