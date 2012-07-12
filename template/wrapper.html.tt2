@@ -49,8 +49,8 @@
           <p><a href="[% secure_host %]/login" class="large primary btn">Member Login</a></p>
           <p><a href="[% secure_host %]/admin-login" class="large btn">Admin Login</a></p>
           <h3>Co-op Stats</h3>
-          <div id="vbc_stats"></div>
-          <script src="http://billing.vancouverbiodiesel.org/stats-widget.js"></script>
+          <div class="vbc_stats"></div>
+          <script src="http://billing.vancouverbiodiesel.org/stats-widget.js?j=1"></script>
 
         </div>
     
